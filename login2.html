@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>زاجل - كلمة السر</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+  <div class="login-header">
+    <div class="login-header-inner">
+      <img class="login-logo" src="resources/img/najah_logo.png" alt="An-Najah National University">
+      <div class="login-title">زاجل - البرنامج الأكاديمي لجامعة النجاح الوطنية</div>
+    </div>
+  </div>
+  <div class="login-strip"><span class="login-date" id="today"></span></div>
+
+  <div class="login-main">
+    <p class="login-welcome">أهلا بك في زاجل</p>
+    <p class="login-prompt">-- يرجى إدخال كلمة السر الخاصة بحسابك :-</p>
+
+    <form id="pwForm" onsubmit="return step2(event)">
+      <div class="login-row">رقم المستخدم: <span id="uShow">12400249</span></div>
+      <div class="login-row">
+        كلمة السر : &nbsp;
+        <input type="password" id="password" class="login-input" autocomplete="off" autofocus>
+      </div>
+      <div class="login-row">
+        <button type="submit" class="login-btn">تسجيل الدخول لزاجل</button>
+      </div>
+      <p class="login-or">أو</p>
+      <div class="login-row">
+        <button type="button" class="login-btn" onclick="alert('Moodle')">Go to Moodle</button>
+      </div>
+    </form>
+
+    <p class="login-warn">
+      يرجى الإنتباه والتأكد من أن الموقع الذي تستخدمه الآن ضمن النطاق الخاص بالجامعة<br>
+      https://zajelbs.najah.edu<br>
+      او<br>
+      https://zajeles.najah.edu
+    </p>
+  </div>
+
+  <div class="login-footer">©2004 - 2026 An-Najah National University - Computer Center, all rights reserved, Nablus - Palestine</div>
+
+  <script>
+    document.getElementById('today').textContent =
+      new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    // show the username passed from step 1
+    var params = new URLSearchParams(location.search);
+    var u = params.get('u') || '12400249';
+    document.getElementById('uShow').textContent = u;
+
+    function step2(e) {
+      e.preventDefault();
+      var p = document.getElementById('password').value;
+      if (u === '12400249' && p === '123456') {
+        location.href = 'index.html';
+      } else {
+        alert('كلمة السر غير صحيحة.');
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

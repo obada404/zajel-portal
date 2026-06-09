@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>زاجل - تسجيل الدخول</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+  <div class="login-header">
+    <div class="login-header-inner">
+      <img class="login-logo" src="resources/img/najah_logo.png" alt="An-Najah National University">
+      <div class="login-title">زاجل - البرنامج الأكاديمي لجامعة النجاح الوطنية</div>
+    </div>
+  </div>
+  <div class="login-strip"><span class="login-date" id="today"></span></div>
+
+  <div class="login-main">
+    <p class="login-welcome">أهلا بك في زاجل</p>
+    <p class="login-prompt">-- يرجى إدخال رقم المستخدم :-</p>
+
+    <form id="loginForm" onsubmit="return step1(event)">
+      <div class="login-row">
+        رقم المستخدم: &nbsp;
+        <input type="text" id="username" class="login-input" autocomplete="off" autofocus>
+      </div>
+      <div class="login-row">
+        <button type="submit" class="login-btn">دخول</button>
+      </div>
+    </form>
+
+    <div class="login-links">
+      <a class="login-en" href="#">English</a><br>
+      مستخدم جديد (طلاب) ؟ <a class="login-link" href="#">اضغط هنا</a><br>
+      <a class="login-link" href="#">(فيديو يوضح الية انشاء مستخدم جديد)</a><br>
+      نسيت كلمة السر (طلاب) ؟ <a class="login-link" href="#">اضغط هنا</a>
+    </div>
+  </div>
+
+  <div class="login-footer">©2004 - 2026 An-Najah National University - Computer Center, all rights reserved, Nablus - Palestine</div>
+
+  <script>
+    document.getElementById('today').textContent =
+      new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    function step1(e) {
+      e.preventDefault();
+      var u = document.getElementById('username').value.trim();
+      if (u === '12400249') {
+        location.href = 'login2.html?u=' + encodeURIComponent(u);
+      } else {
+        alert('رقم المستخدم غير صحيح. الرجاء إدخال رقم مستخدم صحيح.');
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

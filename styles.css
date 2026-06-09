@@ -1,0 +1,359 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Tahoma, Arial, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: #222;
+  background: #ffffff;
+  direction: rtl;
+}
+
+a { color: #0a3d62; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== HEADER ===== */
+.top-header {
+  background: #ffffff;
+  border-bottom: 2px solid #0a3d62;
+  padding: 8px 16px;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.logo-emblem { display: block; flex-shrink: 0; }
+.header-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-align: right;
+}
+
+/* ===== NAV ===== */
+.main-nav { background: #0a3d62; }
+.nav-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.nav-row:first-child { border-bottom: 1px solid #1c5a8a; }
+.nav-row li { position: relative; }
+.nav-row li:not(:last-child)::after {
+  content: "|";
+  color: #6f9bc0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-row li a {
+  display: block;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.nav-row li a:hover { background: #1c5a8a; text-decoration: none; }
+.nav-row li.active a { color: #ffd24d; font-weight: bold; }
+.nav-row li.alert a { color: #ffd24d; }
+
+/* ===== PAGE LAYOUT ===== */
+.page-wrap {
+  display: flex;
+  flex-direction: row;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 12px 8px;
+  gap: 12px;
+  align-items: flex-start;
+}
+.content { flex: 1; min-width: 0; }
+/* sidebar sits on the RIGHT in this RTL layout */
+.sidebar { order: -1; width: 118px; flex-shrink: 0; display: flex; flex-direction: column; gap: 7px; }
+
+/* ===== STUDENT INFO ===== */
+.student-info { padding: 8px 4px 14px; text-align: center; }
+.info-line { margin-bottom: 6px; font-size: 13px; }
+.info-line .label { color: #333; }
+.info-line .value { color: #000; }
+.value-en { color: #000; }
+
+.wifi-block { margin-top: 14px; }
+.link-line { margin-bottom: 8px; }
+.link-line a { text-decoration: underline; }
+.wifi-pass { font-size: 13px; }
+.wifi-pass strong { color: #0a3d62; }
+.btn-wifi {
+  margin-right: 10px;
+  background: #f0f0f0;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn-wifi:hover { background: #e2e2e2; }
+
+.eval-btn-row { margin: 14px 0; }
+.btn-eval {
+  background: #f2c200;
+  border: 1px solid #d4a800;
+  color: #2a2a2a;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 7px 22px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn-eval:hover { background: #e0b400; }
+
+.email-line { margin-top: 8px; font-weight: bold; }
+.email-line a { color: #c00000; }
+
+/* ===== MESSAGES PANEL ===== */
+.messages-panel {
+  border: 1px solid #c4c4c4;
+  margin-top: 16px;
+  background: #fff;
+}
+.panel-head {
+  background: #0a3d62;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+.panel-body { padding: 16px 18px; line-height: 1.8; }
+.panel-body hr { border: none; border-top: 1px solid #ddd; margin: 14px 0; }
+.msg-group { margin-bottom: 6px; }
+.msg-title { color: #c00000; font-weight: bold; margin-top: 6px; }
+.msg-num { color: #c00000; padding-right: 14px; }
+.msg-icon { font-weight: bold; margin-bottom: 6px; }
+.panel-body p { margin-bottom: 6px; }
+.msg-link a { color: #0a3d62; font-weight: bold; text-decoration: underline; }
+
+/* ===== SIDEBAR ===== */
+.side-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(#ffffff, #e2e2e2);
+  border: 1px solid #b6b6b6;
+  border-radius: 4px;
+  padding: 7px 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2a2a2a;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.35;
+  box-shadow: 0 1px 1px rgba(0,0,0,.12);
+}
+.side-btn:hover { background: linear-gradient(#f2f2f2, #d3d3d3); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .page-wrap { flex-direction: column; }
+  .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .sidebar .side-btn { width: auto; flex: 1 1 120px; }
+  .header-title { font-size: 14px; }
+}
+
+/* ================= DATA SUBPAGES ================= */
+.subpage-body { padding: 16px 22px 40px; max-width: 1180px; margin: 0 auto; }
+.topbtn-row { text-align: left; margin-bottom: 6px; }
+.btn-grey {
+  background: #f3f3f3; border: 1px solid #b9b9b9; border-radius: 3px;
+  padding: 4px 12px; font-family: inherit; font-size: 12.5px; cursor: pointer; color: #222;
+}
+.btn-grey:hover { background: #e7e7e7; }
+.page-title { color: #9c1b1b; font-weight: bold; font-size: 16px; margin: 4px 0 16px; }
+.red-note { color: #c00000; font-weight: bold; text-align: center; margin-bottom: 14px; }
+
+/* student header rows for subpages (right aligned label:value pairs) */
+.std-head { margin-bottom: 18px; font-size: 13.5px; line-height: 1.9; }
+.std-head .row { display: flex; flex-wrap: wrap; gap: 28px; justify-content: flex-start; }
+.std-head b { color: #000; }
+.std-head .lbl { color: #333; }
+
+/* GPA / daily bordered table */
+.grade-table { border-collapse: collapse; width: auto; margin: 0 auto; font-size: 13px; }
+.grade-table th, .grade-table td { border: 1px solid #c9c9c9; padding: 6px 14px; text-align: center; }
+.grade-table th { background: #e9e2d2; color: #3a3326; font-weight: bold; }
+.grade-table td.course-name { text-align: right; min-width: 240px; padding-right: 10px; }
+.grade-table tr:nth-child(even) td { background: #f7f4ee; }
+.grade-table tr.total-row td { background: #ece6d8; font-weight: bold; }
+
+/* Transcript (pipe-separated classic layout) */
+.transcript { font-size: 13.5px; max-width: 1000px; margin: 0 auto; }
+.tr-table { border-collapse: collapse; width: 100%; }
+.tr-table th { color: #000; font-weight: bold; padding: 4px 8px; border-bottom: 1px solid #000; }
+.tr-table td { padding: 3px 8px; border-left: 1px solid #cfcfcf; }
+.tr-table td:last-child, .tr-table th:last-child { border-left: none; }
+.tr-grade { text-align: center; }
+.tr-hours { text-align: center; }
+.tr-code { text-align: center; color: #000; }
+.tr-name { text-align: right; }
+.tr-meta { text-align: right; color: #444; padding-right: 6px; }
+.sem-head td { font-weight: bold; text-align: center; padding-top: 12px; border-top: 1px solid #000; }
+.sem-sum td { font-weight: bold; }
+.scale-list { margin-top: 22px; text-align: center; font-size: 13px; line-height: 1.7; color: #222; }
+
+/* exam schedule red box on homepage */
+.exam-box {
+  margin: 16px auto 0;
+  background: #b03030;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 14px;
+  border-radius: 6px;
+  max-width: 300px;
+  line-height: 1.6;
+}
+.exam-box .exam-date { font-size: 11.5px; font-weight: normal; }
+.msg-link.orange a { color: #d2691e; }
+
+/* ================= STUDY PLAN ================= */
+.plan-head { font-size: 13px; line-height: 1.9; margin-bottom: 10px; }
+.plan-head .row { display: flex; flex-wrap: wrap; gap: 30px; }
+.plan-head b { color: #000; }
+.plan-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 10px 0 16px; font-size: 12.5px; align-items: center; }
+.plan-legend span { display: inline-flex; align-items: center; gap: 5px; }
+
+.dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(0,0,0,.25); }
+.dot.green { background: #3aaa35; }
+.dot.yellow { background: #f2c200; }
+.dot.red { background: #cf2a2a; }
+
+.plan-cols { display: grid; grid-template-columns: 1.1fr 1.4fr 0.8fr; gap: 14px; align-items: start; }
+.plan-block { border: 1px solid #c9c9c9; }
+.plan-block > .blk-title { background: #e9e2d2; color: #3a3326; font-weight: bold; text-align: center; padding: 6px; border-bottom: 1px solid #c9c9c9; }
+.plan-block > .blk-sub { display: flex; justify-content: space-around; background: #f3efe6; font-size: 11.5px; padding: 4px; border-bottom: 1px solid #c9c9c9; }
+.plan-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.plan-table td { border-bottom: 1px solid #e2e2e2; padding: 4px 6px; }
+.plan-table .pc-code { text-align: center; color: #000; white-space: nowrap; }
+.plan-table .pc-name { text-align: right; }
+.plan-table .pc-cr { text-align: center; width: 26px; color: #444; }
+.plan-table .pc-st { text-align: center; width: 26px; }
+.plan-table tr:nth-child(even) td { background: #faf8f3; }
+
+.plan-elective { margin-top: 16px; }
+.plan-elective .plan-block { max-width: 640px; }
+@media (max-width: 900px) { .plan-cols { grid-template-columns: 1fr; } }
+
+/* ================= REAL ZAJEL TABLE LAYOUT (homepage) ================= */
+body.zbody { font-family: Tahoma, Arial, sans-serif; color: #000; background: #fff; }
+
+/* header */
+.z-header { width: 100%; border-collapse: collapse; }
+.z-logo-cell { width: 100px; text-align: center; vertical-align: middle; }
+.z-title { font-size: 24px; font-weight: bold; color: #111; padding: 6px 6px; }
+
+/* nav */
+.z-nav-cell { padding: 0; }
+.z-nav { background: #10346a; width: 100%; }
+.z-nav table { border-collapse: collapse; margin: 0; }
+.z-nav td { padding: 0; }
+.z-nav a {
+  display: inline-block; color: #fff; font-size: 11px; font-weight: normal;
+  font-family: Tahoma, Arial, sans-serif; text-decoration: none; padding: 5px 6px;
+  white-space: nowrap; background: #10346a;
+}
+.z-nav a:hover { text-decoration: underline; }
+.z-nav a.yellow { color: #ffff00; font-weight: bold; }
+.z-sep { color: #fff; font-size: 16px; padding: 0 1px; }
+
+/* main content table */
+.z-main { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.z-side-cell { width: 132px; vertical-align: top; padding: 8px 6px 8px 4px; }
+.z-content-cell { vertical-align: top; padding: 6px; }
+
+/* sidebar buttons (real .myButtonABS / .myButtonB) */
+.myButtonABS, .myButtonB {
+  box-shadow: 0 1px 0 0 #fff6af;
+  background: linear-gradient(to bottom, #F5D0A9 5%, #F8ECE0 100%);
+  background-color: #F6E3CE;
+  border-radius: 6px; border: 1px solid #F7BE81;
+  display: block; width: 120px; cursor: pointer; color: #071418;
+  font-family: Tahoma, Arial, sans-serif; font-weight: bold;
+  padding: 9px 6px; text-decoration: none; text-shadow: 0 1px 0 #F8ECE0;
+  margin-bottom: 6px; text-align: center; line-height: 1.3;
+}
+.myButtonABS { font-size: 13px; }
+.myButtonB { font-size: 12px; }
+.myButtonABS:hover, .myButtonB:hover { background: linear-gradient(to bottom, #F7BE81 5%, #F5D0A9 100%); }
+.myButtonABS:active, .myButtonB:active { position: relative; top: 1px; }
+
+/* student info */
+.z-info { border-collapse: collapse; }
+.z-info td { font-size: 15px; padding: 5px 6px; vertical-align: top; }
+.z-info .en-name { font-weight: bold; }
+.z-blue { color: #0000ff; font-weight: bold; }
+.z-red { color: #ff0000; font-weight: bold; }
+.z-link { text-decoration: underline; color: #0a3d62; }
+.wifi-btn { font-family: Tahoma, Arial, sans-serif; font-size: 12px; cursor: pointer; }
+.z-eval {
+  background: #F9D609; color: #000; border: 0; height: 25px; width: 150px;
+  font-family: Tahoma, Arial, sans-serif; font-size: 10pt; cursor: pointer; text-align: center;
+}
+.z-exambox {
+  background: #c0392b; color: #fff; font-weight: bold; text-align: center;
+  border-radius: 6px; padding: 8px 16px; display: inline-block; margin-top: 6px; line-height: 1.6;
+}
+.z-exambox span { font-size: 12px; font-weight: normal; }
+
+/* messages panel (real box-shadow style) */
+.z-panel {
+  width: 70%; border-collapse: separate;
+  box-shadow: 5px 5px 2px #888; border-radius: 5px; border: 2px solid #e3e6e7; padding: 10px;
+}
+.z-panel td { font-size: 15px; padding: 5px; }
+.z-panel-head { background: #10346a; color: #fff; font-weight: bold; }
+.z-panel hr { border: none; border-top: 1px solid #ccc; }
+.z-msg-red { color: #ff0000; font-weight: bold; }
+.z-msg-big { font-size: 18px; color: #174873; font-weight: bold; }
+.z-msg-orange a { color: #e07b00; font-weight: bold; }
+.z-panel a { color: #0a3d62; }
+
+/* ================= LOGIN PAGES (teal theme) ================= */
+.login-body { background: #fff; font-family: Tahoma, Arial, sans-serif; color: #222; }
+.login-header { background: #d3e9e4; }
+.login-header-inner {
+  display: flex; align-items: center; justify-content: flex-start; gap: 18px;
+  max-width: 1500px; margin: 0 auto; padding: 16px 34px;
+}
+.login-logo { width: 84px; height: 84px; flex-shrink: 0; }
+.login-title { font-size: 26px; font-weight: bold; color: #0a5c54; }
+.login-strip { background: #0e7a7a; padding: 8px 34px; text-align: right; }
+.login-date { color: #ffd24d; font-size: 12px; font-weight: bold; }
+.login-main { min-height: 430px; text-align: center; padding: 48px 20px 20px; }
+.login-welcome { font-weight: bold; font-size: 15px; margin-bottom: 18px; }
+.login-prompt { font-size: 14px; margin-bottom: 26px; }
+.login-row { margin: 10px 0; font-size: 14px; }
+.login-input {
+  border: 1px solid #000; height: 26px; width: 240px; font-size: 14px;
+  vertical-align: middle; padding: 0 4px;
+}
+.login-btn {
+  font-family: Tahoma, Arial, sans-serif; font-size: 13px; padding: 3px 12px;
+  cursor: pointer; margin-top: 12px; background: #ececec; border: 1px solid #999; border-radius: 2px;
+}
+.login-btn:hover { background: #ddd; }
+.login-or { color: #c00000; font-weight: bold; margin: 10px 0; }
+.login-links { margin-top: 26px; font-size: 14px; line-height: 2.1; }
+.login-link { color: #c00000; text-decoration: underline; font-weight: bold; cursor: pointer; }
+.login-en { color: #000; font-weight: bold; text-decoration: underline; display: inline-block; margin-top: 8px; }
+.login-warn { color: #c00000; font-weight: bold; margin-top: 40px; line-height: 2; font-size: 14px; }
+.login-footer {
+  background: #0e7a7a; color: #fff; text-align: center; font-size: 11px;
+  padding: 7px; margin-top: 26px;
+}
