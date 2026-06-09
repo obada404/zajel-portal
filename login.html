@@ -3,46 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>زاجل - تسجيل الدخول</title>
+  <title>جامعة النجاح الوطنية - زاجل | An-Najah National University - Zajel</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="login-body">
-  <div class="login-header">
-    <div class="login-header-inner">
-      <img class="login-logo" src="resources/img/najah_logo.png" alt="An-Najah National University">
-      <div class="login-title">زاجل - البرنامج الأكاديمي لجامعة النجاح الوطنية</div>
+<body class="zh-body">
+
+  <!-- ===== top audience bar ===== -->
+  <header class="zh-audience">
+    <div class="zh-audience-inner">
+      <a href="https://mail.najah.edu/">بريد المستخدمين الموظفين</a> |
+      <a href="http://mail.stu.najah.edu/">بريد المستخدمين الطلاب</a> |
+      <a href="https://www.najah.edu/ar/news">اخبار الجامعة</a>
+      <span class="zh-brand">Zajel - An-Najah National University</span>
     </div>
-  </div>
-  <div class="login-strip"><span class="login-date" id="today"></span></div>
+  </header>
 
-  <div class="login-main">
-    <p class="login-welcome">أهلا بك في زاجل</p>
-    <p class="login-prompt">-- يرجى إدخال رقم المستخدم :-</p>
-
-    <form id="loginForm" onsubmit="return step1(event)">
-      <div class="login-row">
-        رقم المستخدم: &nbsp;
-        <input type="text" id="username" class="login-input" autocomplete="off" autofocus>
-      </div>
-      <div class="login-row">
-        <button type="submit" class="login-btn">دخول</button>
-      </div>
-    </form>
-
-    <div class="login-links">
-      <a class="login-en" href="#">English</a><br>
-      مستخدم جديد (طلاب) ؟ <a class="login-link" href="#">اضغط هنا</a><br>
-      <a class="login-link" href="#">(فيديو يوضح الية انشاء مستخدم جديد)</a><br>
-      نسيت كلمة السر (طلاب) ؟ <a class="login-link" href="#">اضغط هنا</a>
+  <!-- ===== header / logo ===== -->
+  <header class="zh-header">
+    <div class="zh-header-inner">
+      <a href="https://www.najah.edu/">
+        <img class="zh-logo" src="resources/img/l_logo.png" alt="An-Najah National University">
+      </a>
+      <span class="zh-htxt">زاجل - النظام المعلوماتي لشؤون الطلبة الأكاديمية لجامعة النجاح الوطنية</span>
+      <img class="zh-smlogo" src="resources/img/sm_logo.png" alt="An-Najah National University">
     </div>
-  </div>
+  </header>
 
-  <div class="login-footer">©2004 - 2026 An-Najah National University - Computer Center, all rights reserved, Nablus - Palestine</div>
+  <!-- ===== nav strip ===== -->
+  <nav class="zh-nav">
+    <div class="zh-nav-inner">
+      <a href="https://www.najah.edu/">زيارة الى موقع الجامعة www.najah.edu</a>
+    </div>
+  </nav>
+
+  <!-- ===== content ===== -->
+  <main class="zh-main">
+    <div class="zh-strip"></div>
+    <div class="zh-cubes">
+
+      <!-- ===== login cube ===== -->
+      <section class="zh-cube" id="cube3">
+        <form id="loginForm" onsubmit="return step1(event)">
+          <table class="zh-login-table">
+            <tr>
+              <td class="zh-head" colspan="3">* تسجيل الدخول</td>
+            </tr>
+            <tr>
+              <td class="zh-cell" colspan="3"><span class="zh-login-prompt">-- يرجى إدخال رقم المستخدم :-</span></td>
+            </tr>
+            <tr>
+              <td class="zh-cell"></td>
+              <td class="zh-cell" style="text-align:center">
+                <input type="text" id="username" class="zh-login-input" name="liun" autocomplete="off" autofocus>
+              </td>
+              <td class="zh-cell"></td>
+            </tr>
+            <tr>
+              <td class="zh-cell zh-rounded-br" style="width:50px"></td>
+              <td class="zh-cell" style="text-align:center">
+                <button type="submit" class="zh-login-btn">دخول</button>
+              </td>
+              <td class="zh-cell zh-rounded-bl" style="text-align:left">
+                <u><a class="zh-en" href="#">English</a></u>
+              </td>
+            </tr>
+          </table>
+        </form>
+
+        <div class="zh-login-extra">
+          مستخدم جديد (طلاب) ؟ <a href="#">اضغط هنا</a><br>
+          <a class="zh-vid" href="#">( فيديو يوضح آلية إنشاء كلمة سر زاجل جديدة )</a><br>
+          نسيت كلمة السر (طلاب) ؟ <a href="#">اضغط هنا</a>
+        </div>
+
+        <div class="zh-secure">
+          <div class="zh-secure-ttl">تنبيه أمني</div>
+          <img src="resources/img/zajel_security_logo.png" alt="تنبيه أمني">
+          <div class="zh-secure-note">
+            يرجى الانتباه من أي موقع وهمي مشابه لهذا الموقع والتأكد من أن عنوان الموقع هو
+            <span class="zh-dom">zajel.najah.edu</span>
+            قبل إدخال بياناتك
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== new / announcements cube ===== -->
+      <section class="zh-cube zh-new" id="cube1">
+        <a href="#">
+          <img class="zh-gif" src="resources/img/new.gif" alt="new">
+          <span class="zh-tag">للمستجدين :</span>
+          <span class="zh-txt"> رابط القبول والتسجيل للعام 2025-2026 </span>
+        </a><br>
+        <a href="#">
+          <img class="zh-gif" src="resources/img/new.gif" alt="new">
+          <span class="zh-tag">دراسات عليا :</span>
+          <span class="zh-txt"> رابط القبول والتسجيل للعام 2025-2026 </span>
+        </a><br>
+        <a href="#">
+          <img class="zh-gif" src="resources/img/new.gif" alt="new">
+          <span class="zh-txt">الاستعلام عن المعدلات حسب الفروع والمجالات</span>
+        </a>
+
+        <div>
+          <img class="zh-zajel-logo" src="resources/img/zajelLogo.png" alt="Zajel">
+        </div>
+        <div class="zh-badges">
+          <a href="https://play.google.com/store/apps/details?id=com.najah.Zajel"><img src="resources/img/googleplay.png" alt="Google Play"></a>
+          <a href="https://apps.apple.com/us/app/zajel-nnu/id6670542412"><img src="resources/img/download_appStore.png" alt="App Store"></a>
+        </div>
+
+        <h4 style="justify-content:center;margin-top:14px">
+          دفتر زوار زاجل
+          <img src="resources/img/guest-book4.png" width="60" height="32" alt="">
+        </h4>
+        <div class="zh-ann">
+          <a href="#">شكراً لجهودكم المتواصلة في خدمة الطلبة</a>
+          <span class="zh-date">2026-06-08</span>
+        </div>
+      </section>
+
+      <!-- ===== important links cube ===== -->
+      <section class="zh-cube" id="cube6">
+        <ul class="zh-links">
+          <li><a href="#">التقويم الجامعي</a></li>
+          <li><a href="#">وصف المواد <span class="zh-fresh">(دليل 2025)</span></a></li>
+          <li><a href="#">خطة المساقات الدراسية <span class="zh-fresh">(دليل 2025)</span></a></li>
+          <li><a href="#">مخطط المساقات</a></li>
+          <li><a href="#">دليل الطالب</a></li>
+          <li><a href="#">دليل القاعات</a></li>
+          <li><a href="#">أرشيف الخريجين</a></li>
+          <li><a href="#">دليل المكتبة</a></li>
+          <li><a href="#">قواعد البيانات الإلكترونية - المكتبة الرقمية</a></li>
+          <li><a href="#">المحاضرات المسجلة</a></li>
+          <li><a href="#">مركز التعليم الإلكتروني - Elearning Center</a></li>
+          <li><a href="#">مجلة مقام</a></li>
+          <li><a href="#">مركز سواء</a></li>
+          <li><a href="#">مركز فتوى</a></li>
+          <li><a href="#">ملتقى القرآن الكريم</a></li>
+          <li><a href="#">المنصة الوطنية للتعليم عن بعد</a></li>
+          <li><a href="#">المجلات العلمية (Online Submission)</a></li>
+          <li><a href="#">مركز التعليم المستمر</a></li>
+          <li><a href="#">أرقام دليل الهاتف</a></li>
+        </ul>
+      </section>
+
+      <!-- ===== university announcements cube ===== -->
+      <section class="zh-cube" id="cube5">
+        <h4>الإعلانات الجامعية <img src="resources/img/guest-book4.png" width="60" height="32" alt=""></h4>
+        <div class="zh-ann">
+          <a href="#">مواعيد تقديم طلبات تأجيل الفصل الدراسي</a>
+          <span class="zh-date">2026-06-09</span><br>
+          <a href="#">تعليمات الامتحانات النهائية للفصل الصيفي</a>
+          <span class="zh-date">2026-06-05</span><br>
+          <a href="#">إعلان بخصوص رسوم التسجيل للفصل القادم</a>
+          <span class="zh-date">2026-06-01</span>
+        </div>
+      </section>
+
+      <!-- ===== exam schedule cube ===== -->
+      <section class="zh-cube" id="cube7">
+        <h4>جدول امتحان عام <img src="resources/img/guest-book4.png" width="60" height="32" alt=""></h4>
+        <div class="zh-ann">
+          <a href="#">جدول الامتحان العام للمساقات الجامعية</a>
+          <span class="zh-date">2026-06-07</span><br>
+          <a href="#">تعليمات الجلوس لامتحان الكفاءة في اللغة الإنجليزية</a>
+          <span class="zh-date">2026-06-03</span>
+        </div>
+      </section>
+
+      <!-- ===== general announcements cube ===== -->
+      <section class="zh-cube" id="cube4">
+        <h4>الإعلانات <img src="resources/img/guest-book4.png" width="60" height="32" alt=""></h4>
+        <div class="zh-ann">
+          <a href="#">ساعات عمل دائرة القبول والتسجيل خلال العطلة</a>
+          <span class="zh-date">2026-06-06</span><br>
+          <a href="#">تحديث بيانات الطلبة الإلكترونية</a>
+          <span class="zh-date">2026-06-02</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== footer ===== -->
+  <footer class="zh-footer">
+    ©2004 - 2026 An-Najah National University - Computer Center, all rights reserved, Nablus - Palestine
+  </footer>
 
   <script>
-    document.getElementById('today').textContent =
-      new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
     function step1(e) {
       e.preventDefault();
       var u = document.getElementById('username').value.trim();

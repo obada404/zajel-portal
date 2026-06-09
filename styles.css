@@ -357,3 +357,100 @@ body.zbody { font-family: Tahoma, Arial, sans-serif; color: #000; background: #f
   background: #0e7a7a; color: #fff; text-align: center; font-size: 11px;
   padding: 7px; margin-top: 26px;
 }
+
+/* ================= ZAJEL PUBLIC HOMEPAGE (real landing / first login) ================= */
+.zh-body { background: #fff; font-family: Tahoma, Arial, sans-serif; color: #000; }
+
+/* top audience bar */
+.zh-audience { background: #005e66; color: #fff; font-size: 12px; }
+.zh-audience-inner { max-width: 1200px; margin: 0 auto; padding: 6px 18px; }
+.zh-audience a { color: #fff; text-decoration: none; }
+.zh-audience a:hover { text-decoration: underline; }
+.zh-audience .zh-brand { float: left; }
+
+/* header logo */
+.zh-header { background: #008088; }
+.zh-header-inner {
+  max-width: 1200px; margin: 0 auto; padding: 14px 18px;
+  display: flex; align-items: center; gap: 16px;
+}
+.zh-header .zh-logo { width: 90px; height: 90px; }
+.zh-header .zh-htxt { color: #fff; font-size: 22px; font-weight: bold; line-height: 1.4; }
+.zh-header .zh-smlogo { width: 70px; height: 70px; margin-right: auto; }
+
+/* nav strip */
+.zh-nav { background: #fff; border-bottom: 3px solid #008088; }
+.zh-nav-inner { max-width: 1200px; margin: 0 auto; padding: 10px 18px; }
+.zh-nav a { color: #005A43; font-weight: bold; font-size: 14px; text-decoration: none; }
+.zh-nav a:hover { text-decoration: underline; }
+
+/* content cubes */
+.zh-main { max-width: 1200px; margin: 0 auto; padding: 18px; }
+.zh-strip { background: #008088; height: 14px; border-radius: 4px; margin-bottom: 16px; }
+.zh-cubes { display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start; }
+.zh-cube {
+  flex: 1 1 300px; min-width: 280px; background: #fff;
+  border: 1px solid #d8e3e1; border-radius: 10px; padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.zh-cube h4 {
+  color: #005e66; font-size: 15px; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* login cube */
+.zh-login-table { width: 100%; border-collapse: collapse; }
+.zh-login-table .zh-head {
+  background: #008088; color: #fff; font-weight: bold; text-align: center;
+  padding: 9px; border-radius: 12px 12px 0 0; font-size: 14px;
+}
+.zh-login-table .zh-cell { background: #edf3f1; padding: 9px 10px; }
+.zh-login-prompt { font-weight: bold; color: #000; }
+.zh-login-input { height: 26px; width: 170px; font-size: 14px; padding: 0 4px; border: 1px solid #888; }
+.zh-login-btn {
+  font-family: Tahoma, Arial, sans-serif; font-size: 13px; padding: 4px 16px;
+  cursor: pointer; background: #ececec; border: 1px solid #999; border-radius: 3px;
+}
+.zh-login-btn:hover { background: #ddd; }
+.zh-cell .zh-en { color: #000; font-weight: bold; text-decoration: underline; }
+.zh-rounded-bl { border-radius: 0 0 0 12px; }
+.zh-rounded-br { border-radius: 0 0 12px 0; }
+
+.zh-login-extra { margin-top: 12px; font-size: 13px; line-height: 1.9; }
+.zh-login-extra a { color: #008088; text-decoration: underline; font-weight: bold; }
+.zh-login-extra .zh-vid { color: #c00000; }
+.zh-secure { text-align: center; margin-top: 14px; }
+.zh-secure .zh-secure-ttl { color: #c00000; font-weight: bold; font-size: 13px; }
+.zh-secure img { display: block; margin: 8px auto; }
+.zh-secure .zh-secure-note { color: #c00000; font-weight: bold; font-size: 13px; line-height: 1.7; }
+.zh-secure .zh-secure-note .zh-dom { color: #0000ff; font-size: 16px; }
+
+/* new / announcements cube */
+.zh-new { text-align: center; line-height: 2; }
+.zh-new img.zh-gif { vertical-align: middle; }
+.zh-new a { text-decoration: none; }
+.zh-new .zh-tag { color: #c00000; font-weight: bold; }
+.zh-new .zh-txt { color: #0000cc; }
+.zh-badges { margin-top: 10px; }
+.zh-badges img { height: 32px; margin: 0 3px; vertical-align: middle; }
+.zh-zajel-logo { max-width: 150px; margin: 8px auto; }
+
+/* important links cube */
+.zh-links { list-style: none; line-height: 2.2; }
+.zh-links li a { color: #8b4513; text-decoration: none; font-size: 13.5px; }
+.zh-links li a:hover { text-decoration: underline; }
+.zh-links .zh-fresh { color: #c00000; font-weight: bold; }
+
+/* announcement boxes */
+.zh-ann { font-size: 13.5px; line-height: 1.9; }
+.zh-ann a { color: #800000; font-weight: bold; text-decoration: none; }
+.zh-ann a:hover { color: #bc0000; }
+.zh-ann .zh-date { color: #888; font-size: 12px; }
+
+/* footer */
+.zh-footer { background: #005e66; color: #fff; text-align: center; font-size: 11px; padding: 10px; margin-top: 22px; }
+
+@media (max-width: 640px) {
+  .zh-header .zh-htxt { font-size: 16px; }
+  .zh-header .zh-smlogo { display: none; }
+}
